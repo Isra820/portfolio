@@ -128,9 +128,10 @@ header {
 
 .img-shape img {
   width: 85%;
+  height:85%;
+  object-fit: cover;
   border-radius: 50%;
 }
-
 
 
 /* ===== FOOTER ===== */
@@ -213,14 +214,33 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 250px;
   transition: 0.3 ease;
+  margin-bottom: 20px;
 }
 
 .project-card h3 {
     color:#d63384;
+    margin-bottom: 10px;
 }
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-card a {
+  display: inline-block;          /* allows margin & padding */
+  margin-top: 12px;               /* space from text above */
+  padding: 10px 18px;
+  background-color: #c2a5ea;      /* warm professional color */
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.project-card a:hover {
+  background-color: #7331c4;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Skills */
