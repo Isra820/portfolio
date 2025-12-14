@@ -1,3 +1,14 @@
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
@@ -21,6 +32,7 @@ header {
   left: 0;
   z-index: 10;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display:block;
 }
 
 .navbar {
@@ -36,8 +48,37 @@ header {
   color: #d63384;
 }
 
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
 .nav-links {
-  list-style: none;
+    position: absolute;
+    top: 70px;
+    right: 8%;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    display: none;
+    padding: 15px;
+  }
+.nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 8px 0;
+  }
+
+   .nav-links a {
+    padding: 8px 0;
+    display: block;
+  }
+}
+.nav-links {
   display: flex;
   gap: 2rem;
 }
@@ -56,6 +97,19 @@ header {
   padding-bottom: 3px;
 }
 
+.menu-toggle {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #d63384;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* ===== HERO SECTION ===== */
 .hero {
   display: flex;
@@ -64,6 +118,7 @@ header {
   padding: 10rem 8% 6rem;
   min-height: 100vh;
   gap: 2rem;
+  animation: fadeUp 0.9s ease forwards;
 }
 
 .hero-text {
@@ -176,6 +231,7 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   margin-top: 100px;
   margin-bottom: 120px;
+  animation: fadeUp 0.9s ease forwards;
 }
 
 .about-photo img {
@@ -205,6 +261,7 @@ footer {
   gap: 25px;
   margin-top: 100px;
   margin-bottom: 330px;
+  animation: fadeUp 0.9s ease forwards;
 }
 
 .project-card {
@@ -213,7 +270,7 @@ footer {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 250px;
-  transition: 0.3 ease;
+  transition: all 0.3 ease;
   margin-bottom: 20px;
 }
 
@@ -227,10 +284,10 @@ footer {
 }
 
 .project-card a {
-  display: inline-block;          /* allows margin & padding */
-  margin-top: 12px;               /* space from text above */
+  display: inline-block;          
+  margin-top: 12px;               
   padding: 10px 18px;
-  background-color: #c2a5ea;      /* warm professional color */
+  background-color: #c2a5ea;      
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -250,6 +307,7 @@ footer {
   text-align: left;
   margin-top:120px;
   margin-bottom: 280px;
+  animation: fadeUp 0.9s ease forwards;
 }
 
 .skill {
@@ -266,6 +324,8 @@ footer {
   background: #ff69b4;
   height: 10px;
   border-radius: 12px;
+  width: 0;
+  transition: width 1.5s ease;
 }
 
 /* Contact */
@@ -274,6 +334,7 @@ footer {
     padding-top: 8rem;
     padding-bottom: 5rem;
     min-height: 100vh;
+    animation: fadeUp 0.9s ease forwards;
 }
 .contact-page h2{
     color:#d63384;
