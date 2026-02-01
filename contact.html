@@ -26,18 +26,23 @@
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:khlifiisra736@gmail.com">khlifiisra736@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/Isra820" target="_blank">github.com/Isra820</a></p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+    
+    <form id="contact-form" class="contact-form">
+       <input type="text" name="name" placeholder="Your Name" required>
+       <input type="email" name="email" placeholder="Your Email" required>
+       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+       <button type="submit" class="btn">Send Message</button>
+       <p id="form-status"></p>
     </form>
+
   </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Isra Khlifi. All rights reserved.</p>
   </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
